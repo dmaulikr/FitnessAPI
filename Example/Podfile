@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'FitnessAPI_Example', :exclusive => true do
+  pod 'FitnessAPI', :path => '../'
+end
+
+target 'FitnessAPI_Tests', :exclusive => true do
+  pod 'FitnessAPI', :path => '../'
+
+  pod 'FBSnapshotTestCase'
+end
