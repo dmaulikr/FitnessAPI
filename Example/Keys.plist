@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StravaClientId</key>
+	<string>10326</string>
+	<key>StravaClientSecret</key>
+	<string>a3099511cf1afc5dba6aba37836f1b558c4944be</string>
+	<key>FitbitClientId</key>
+	<string>227NRG</string>
+	<key>FitbitClientSecret</key>
+	<string>3f4c8a80ecd70f1ba7e1a9dad1224c4d</string>
+	<key>RunKeeperClientId</key>
+	<string>8501b87a85ea44cf81ad254e3ee583d7</string>
+	<key>RunKeeperClientSecret</key>
+	<string>eeaf922f0466453db0573d1f735d892b</string>
+</dict>
+</plist>
