@@ -11,6 +11,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+* Alamofire
+* SwiftyJSON
+* p2.OAuth2
+
 ## Installation
 
 FitnessAPI is available through [CocoaPods](http://cocoapods.org). To install

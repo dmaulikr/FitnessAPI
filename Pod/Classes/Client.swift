@@ -45,6 +45,10 @@ public class Client {
         self.oauth2.authorize()
     }
     
+    /**
+        De authorize from api
+        Use this if user wants to switch app or device
+    */
     public func deauthorize(){
         self.oauth2.forgetTokens()
     }
@@ -55,6 +59,7 @@ public class Client {
     
     /**
         Abstract method needs child to implement
+        Fetch activities from api
     */
     public func fetchActivities(params: [String:String] = Dictionary<String,String>(), completionHandler: (Array<Activity>, NSError?) -> Void){
         fatalError("child class needs to implement this method")
