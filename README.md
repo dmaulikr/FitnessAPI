@@ -16,6 +16,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 FitnessAPI is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
+* Need to set client ids and client secrets for the APIs you are using
+* Make sure to Register fitnessapi://authorization url scheme
+
 ```ruby
 pod "FitnessAPI"
 ```
