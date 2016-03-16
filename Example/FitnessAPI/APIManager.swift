@@ -9,7 +9,7 @@
 import Foundation
 import FitnessAPI
 
-class APIManager {
+public class APIManager {
     static let sharedInstance = APIManager()
     
 //    var deviceConnected
@@ -65,7 +65,7 @@ class APIManager {
         currentAPIClient?.authorize(completionHander)
     }
     
-    func fetchActivities(completionHandler: ((Array<Activity>, NSError?) -> Void)){
+    func fetchActivities(completionHandler: ((Array<Activity>?, NSError?) -> Void)){
         currentAPIClient?.fetchActivities(completionHandler: completionHandler)
     }
 }

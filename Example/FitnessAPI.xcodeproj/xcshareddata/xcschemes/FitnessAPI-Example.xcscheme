@@ -52,6 +52,16 @@
                ReferencedContainer = "container:FitnessAPI.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9607530D1C98C17F00388AC7"
+               BuildableName = "FitnessAPI_ExampleTests.xctest"
+               BlueprintName = "FitnessAPI_ExampleTests"
+               ReferencedContainer = "container:FitnessAPI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

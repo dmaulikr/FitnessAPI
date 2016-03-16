@@ -14,40 +14,40 @@ public class Activity {
         The id of the activity
         Ex. Strava_23942349
     */
-    var id:String?
+    public var id:String?
     
     /**
         running, cycling, workout
         only care about running for now
     */
-    var type:String?
+    public var type:String?
     
     /**
         Total disntance in meters
     */
-    var distance: Float? //meters
+    public var distance: Float? //meters
     
     /**
         Total running time in seconds
     */
-    var time: Int?
+    public var time: Int?
     
     /**
         min/km or min/mile
     */
-    var pace: Float? //min/km  or min/mile
+    public var pace: Float? //min/km  or min/mile
     
     /**
         UTC time representation from NSDate
         Ex. 2013-08-24 00:04:12 +0000
     */
-    var startDate: String?
+    public var startDate: String?
     
     /**
         time zone abbreviation. 
         Ex. EDT -> "Eastern Daylight Time"
     */
-    var timeZone: String?
+    public var timeZone: String?
     
     init(json:JSON){
         mapToModel(json)

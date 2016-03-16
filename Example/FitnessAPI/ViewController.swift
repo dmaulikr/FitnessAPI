@@ -25,7 +25,9 @@ class ViewController: UIViewController {
     
     @IBAction func fetchActivities(sender: AnyObject) {
         APIManager.sharedInstance.fetchActivities { (activities, error) -> Void in
-            print(activities.count)
+            if error == nil {
+                print(activities!.count)
+            }
         }
     }
     

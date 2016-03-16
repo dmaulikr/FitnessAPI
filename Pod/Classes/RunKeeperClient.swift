@@ -35,7 +35,7 @@ public class RunKeeperClient: Client {
     /**
      Fetch activities from api.
      */
-    override public func fetchActivities(params: [String : String] = Dictionary<String, String>(), completionHandler: (Array<Activity>, NSError?) -> Void) {
+    override public func fetchActivities(params: [String : String] = Dictionary<String, String>(), completionHandler: (Array<Activity>?, NSError?) -> Void) {
         
         let activityPath:String = "\(self.baseURL)/fitnessActivities"
         
@@ -59,6 +59,7 @@ public class RunKeeperClient: Client {
 
                     break
                 case .Failure(let error):
+                    completionHandler(nil, error)
                     print(error)
                     break
                 }

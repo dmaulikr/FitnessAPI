@@ -61,7 +61,7 @@ public class Client {
         Abstract method needs child to implement
         Fetch activities from api
     */
-    public func fetchActivities(params: [String:String] = Dictionary<String,String>(), completionHandler: (Array<Activity>, NSError?) -> Void){
+    public func fetchActivities(params: [String:String] = Dictionary<String,String>(), completionHandler: (Array<Activity>?, NSError?) -> Void){
         fatalError("child class needs to implement this method")
     }
 }

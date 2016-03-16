@@ -7,10 +7,13 @@ target 'FitnessAPI_Example', :exclusive => true do
   pod 'Alamofire', '~> 3.0'
   pod 'SwiftyJSON', '~> 2.3.2'
   pod 'p2.OAuth2', '~> 2.2.1'
+
 end
 
 target 'FitnessAPI_Tests', :exclusive => true do
   pod 'FitnessAPI', :path => '../'
-
+  pod 'OHHTTPStubs'
+  pod 'OHHTTPStubs/Swift'
+  pod 'SWHttpTrafficRecorder'
   pod 'FBSnapshotTestCase'
 end

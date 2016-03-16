@@ -39,7 +39,7 @@ public class StravaClient: Client {
     /**
         Fetch activities from api.
     */
-    override public func fetchActivities(params: [String : String] = Dictionary<String, String>(), completionHandler: (Array<Activity>, NSError?) -> Void) {
+    override public func fetchActivities(params: [String : String] = Dictionary<String, String>(), completionHandler: (Array<Activity>?, NSError?) -> Void) {
         
         let activityPath:String = "\(self.baseURL)/athlete/activities"
         
@@ -52,11 +52,10 @@ public class StravaClient: Client {
                     let json = JSON(value)
                     let jsonArray = json.arrayValue
                     let activities = StravaActivity.mapListOfStravaJSON(jsonArray)
-                    
                     completionHandler(activities, nil)
-                    
                     break
                 case .Failure(let error):
+                    completionHandler(nil, error)
                     print(error)
                     break
                 }
