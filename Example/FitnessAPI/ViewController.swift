@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         APIManager.sharedInstance.fetchActivities { (activities, error) -> Void in
             if error == nil {
                 print(activities!.count)
-            }
+           }
         }
     }
     

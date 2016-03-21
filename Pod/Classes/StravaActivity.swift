@@ -14,6 +14,7 @@ public class StravaActivity: Activity{
         self.id = "strava_\(json["id"].int)"
         self.distance = json["distance"].float
         self.time = json["elapsed_time"].int
+        self.type = json["type"].string
         
         
         // strava api date is in UTC format already, but we need to format it
@@ -30,7 +31,7 @@ public class StravaActivity: Activity{
         let timeZoneSplitString:[String] = timeZoneString.componentsSeparatedByString(" ")
         let zone:NSTimeZone = NSTimeZone(name: timeZoneSplitString[1])!
         
-        self.startDate = String(stravaDate)
+        self.startDate = stravaDate.timeIntervalSince1970
         self.timeZone = zone.abbreviation
     }
     

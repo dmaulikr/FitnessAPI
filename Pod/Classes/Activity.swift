@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-public class Activity {
+public class Activity{
     /**
         The id of the activity
         Ex. Strava_23942349
@@ -38,10 +38,9 @@ public class Activity {
     public var pace: Float? //min/km  or min/mile
     
     /**
-        UTC time representation from NSDate
-        Ex. 2013-08-24 00:04:12 +0000
+        Unix time stamp. seconds since 1970
     */
-    public var startDate: String?
+    public var startDate: NSTimeInterval?
     
     /**
         time zone abbreviation. 
@@ -60,4 +59,21 @@ public class Activity {
     func mapToModel(json:JSON){
         fatalError("child need to override this method")
     }
+    
+    /**
+        Returns a dictionary with all the properties of this class.
+        Helpful when need to save
+    */
+    public func toDict() -> [String:AnyObject] {
+        return [
+            "id": self.id!,
+            "type": self.type!,
+            "distance": self.distance!,
+            "time": self.time!,
+//            "pace": self.pace!,
+            "startDate": self.startDate!,
+            "timeZone": self.timeZone!
+        ]
+    }
+
 }

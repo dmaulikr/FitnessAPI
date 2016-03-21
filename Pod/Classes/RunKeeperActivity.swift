@@ -32,7 +32,7 @@ public class RunKeeperActivity: Activity{
                 dateFormatter.dateFormat = "EEE, d MMM yyyy HH:mm:ss"
                 let date:NSDate = dateFormatter.dateFromString(startTimeString)!
                 
-                self.startDate = String(date)
+                self.startDate = date.timeIntervalSince1970
                 self.timeZone = timeZone.abbreviation
             }
         }
